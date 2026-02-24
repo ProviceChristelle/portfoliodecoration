@@ -46,6 +46,7 @@
 <!-- Main Content Section -->
 <main class="flex-1 flex flex-col items-center justify-center px-6 md:px-12 pb-24">
 <!-- Hero Section Container -->
+ <div class="slider">
 <div class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <!-- Left Column: Image/Visual -->
 <div class="relative @container">
@@ -80,13 +81,16 @@
                     </p>
 </div>
 <div class="flex flex-wrap gap-4 pt-4">
-<a class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg shadow-primary/20 flex items-center gap-2" href="#">
-                        Découvrir mes projets
-                        <span class="material-symbols-outlined">arrow_forward</span>
+<!-- Bouton vers la section suivante -->
+<a class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg shadow-primary/20 flex items-center gap-2" href="#projects">
+    Découvrir mes projets
+    <span class="material-symbols-outlined">arrow_forward</span>
 </a>
-<a class="border border-background-dark/20 dark:border-background-light/20 hover:bg-background-dark hover:text-white dark:hover:bg-background-light dark:hover:text-background-dark px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2" href="#">
-                        Me contacter
-                    </a>
+
+<!-- Bouton vers la dernière section -->
+<a class="border border-background-dark/20 dark:border-background-light/20 hover:bg-background-dark hover:text-white dark:hover:bg-background-light dark:hover:text-background-dark px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2" href="#contact">
+    Me contacter
+</a>
 </div>
 <!-- Social Proof / Stats -->
 <div class="grid grid-cols-3 gap-8 pt-8 border-t border-background-dark/10 dark:border-background-light/10">
@@ -96,36 +100,39 @@
 </div>
 </div>
 </main>
-<!-- Bottom Navigation Bar (Responsive/Mobile focus) -->
-<!-- <nav class="fixed bottom-0 left-0 right-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-background-dark/5 dark:border-background-light/5 px-6 py-4 flex items-center justify-around z-50">
-<a class="flex flex-col items-center gap-1 text-primary group" href="#">
-<span class="material-symbols-outlined fill-1">home</span>
-<span class="text-[10px] uppercase font-bold tracking-tighter">Accueil</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-background-dark/40 dark:text-background-light/40 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">grid_view</span>
-<span class="text-[10px] uppercase font-bold tracking-tighter">Portfolio</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-background-dark/40 dark:text-background-light/40 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">carpenter</span>
-<span class="text-[10px] uppercase font-bold tracking-tighter">Atelier</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-background-dark/40 dark:text-background-light/40 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">mail</span>
-<span class="text-[10px] uppercase font-bold tracking-tighter">Contact</span>
-</a>
-</nav> -->
-<!-- Social Bar Floating (Desktop) -->
-<!-- <div class="hidden lg:flex fixed left-6 top-1/2 -translate-y-1/2 flex-col gap-6 items-center">
-<div class="h-20 w-px bg-primary/30"></div>
-<a class="text-background-dark/40 dark:text-background-light/40 hover:text-primary transition-colors" href="#">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-<a class="text-background-dark/40 dark:text-background-light/40 hover:text-primary transition-colors" href="#">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-</a>
-<div class="h-20 w-px bg-primary/30"></div>
-</div> -->
+
+
+
+</div>
+<section class="min-h-screen flex items-center justify-center bg-[ffffff]">
+  <div class="text-center max-w-2xl px-6">
+
+    <!-- Titre -->
+    <h2 class="text-5xl tracking-widest font-light mb-12">
+      SOMMAIRE
+    </h2>
+
+    <!-- Liste -->
+    <div class="space-y-4 text-gray-700 text-lg">
+
+      <p>01 : Présentation personnelle</p>
+
+      <p>02 : Formation et compétences (Menuiserie moderne)</p>
+
+      <p>03 : Inspirations et idées d’aménagement</p>
+
+      <p>04 : Réalisations en menuiserie</p>
+
+      <p>05 : Projets d’aménagement simples</p>
+
+      <p>06 : Objectifs professionnels</p>
+
+      <p>07 : Contact & réseaux sociaux</p>
+
+    </div>
+
+  </div>
+</section>
 </body></html>
 <!DOCTYPE html>
 
@@ -170,6 +177,7 @@
   </head>
   <body class="bg-background-light dark:bg-background-dark text-[#221910] dark:text-[#f8f7f6] min-h-screen">
     <!-- <div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden"> -->
+      <div class="slider">
     <div class="relative flex min-h-screen w-full flex-col 
             px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32
             bg-background-light dark:bg-background-dark overflow-x-hidden">
@@ -184,7 +192,7 @@
 <!-- Main Content -->
 <div class="flex flex-col gap-6 p-4">
 <!-- Formation Section -->
-<section>
+<section id="pro">
 <div class="flex items-center gap-2 mb-4">
 <span class="material-symbols-outlined text-primary">school</span>
 <h2 class="text-[#221910] dark:text-[#f8f7f6] text-xl font-bold leading-tight">Formation</h2>
@@ -214,10 +222,17 @@
 </div>
 </section>
 <!-- Image Showcase 1 -->
-<div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-primary/10 group">
-<img alt="Atelier de menuiserie moderne" class="w-full h-full object-cover" data-alt="Modern woodworking workshop with tools and wood planks" src="img/comp1.jpg" />
-<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-</div>
+<div class="relative w-full h-[850px] rounded-xl overflow-hidden shadow-lg border border-primary/10 group">
+  
+  <img 
+    src="img/comp1.jpg"
+    alt="Atelier de menuiserie moderne"
+    class="w-full h-full object-cover"
+  />
+
+  <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+  </div>
+
 </div>
 <!-- Compétences Techniques -->
 <section>
@@ -233,10 +248,17 @@
 </div>
 </section>
 <!-- Image Showcase 2 -->
-<div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-primary/10 group">
-<img alt="Meuble design en bois" class="w-full h-full object-cover" data-alt="Elegant minimal wooden table finished in a modern room" src="img/comp2.jpg" />
-<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-</div>
+<div class="relative w-full h-[950px] rounded-xl overflow-hidden shadow-lg border border-primary/10 group">
+  
+  <img 
+    src="img/comp2.jpg"
+    alt="Atelier de menuiserie moderne"
+    class="w-full h-full object-cover"
+  />
+
+  <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+  </div>
+
 </div>
 <!-- Compétences Artistiques -->
 <section class="mb-8">
@@ -305,6 +327,7 @@
 </div>
 </div> -->
 </div>
+</div>
 </body></html>
 <!DOCTYPE html>
 
@@ -365,7 +388,7 @@
 <!-- Search & Filter Section -->
 <div class="py-6 space-y-4">
 <div class="relative">
-  <h4 class="px-5 text-sm font-semibold text-center ">Je m’inspire d’intérieurs modernes, simples et fonctionnels qui offrent à la fois confort et esthétique. Mon intérêt se porte particulièrement sur les espaces bien organisés, lumineux et harmonieux.
+  <h4 class="px-5 text-sm  text-center ">Je m’inspire d’intérieurs modernes, simples et fonctionnels qui offrent à la fois confort et esthétique. Mon intérêt se porte particulièrement sur les espaces bien organisés, lumineux et harmonieux.
 Mes inspirations proviennent :
 Des décorations modernes et minimalistes
 Des meubles en HDF et des matériaux modernes
@@ -523,7 +546,7 @@ Des solutions de rangement pratiques et gain de place
 </header>
 <main class="flex-1 max-w-5xl mx-auto w-full px-2 pb-6">
 
-<section class="mt-6 mb-8">
+<section class="mt-6 mb-8" id="projects">
 <h2 class="text-3xl font-extrabold text-primary mb-2">Projets de Menuiserie</h2>
 <p class="text-sm opacity-70">Découvrez mon savoir-faire à travers une sélection de mes meilleurs travaux artisanaux.</p>
 </section>
@@ -534,10 +557,14 @@ Des solutions de rangement pratiques et gain de place
   <article class="group">
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
-        <span class="text-primary font-mono text-2xl">01.</span> Étagère murale
+        <span class="text-primary font-mono text-2xl">01.</span> Étagère murale (Handyman)
       </h3>
-      <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">handyman</span>
+        <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">handyman</span>
     </div>
+     <p  class="text-sm opacity-70">
+
+ Conception et fabrication d’une étagère murale en HDF. J’ai travaillé sur l’adaptabilité de l’espace et l’optimisation du rangement, tout en respectant un design moderne et fonctionnel</p><br>
+   
     <div class="grid grid-cols-3 gap-2 h-[300px] md:h-[700px]">
       <div class="bg-primary/5 rounded-lg border border-primary/10 overflow-hidden relative">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('./img/p4projet11.jpg');"></div>
@@ -556,9 +583,11 @@ Des solutions de rangement pratiques et gain de place
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
         <span class="text-primary font-mono text-2xl">02.</span> Décor TV
+
       </h3>
       <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">tv</span>
-    </div>
+    </div> 
+    <p  class="text-sm opacity-70">  Réalisation d’un meuble TV en HDF, du croquis à l’assemblage final. Ce projet montre ma précision, mon sens esthétique et ma capacité à organiser un espace de manière harmonieuse</p><br>
     <div class="grid grid-cols-3 gap-2 max-w-5xl mx-auto h-[300px] md:h-[700px]">
       <div class="bg-primary/5 rounded-lg border border-primary/10 overflow-hidden relative">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/p4projet21.jpg');"></div>
@@ -576,10 +605,13 @@ Des solutions de rangement pratiques et gain de place
   <article class="group">
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
-        <span class="text-primary font-mono text-2xl">03.</span> Commode vidéo-surveillance
+        <span class="text-primary font-mono text-2xl">03.</span> Commode vidéo-surveillance (Security)
       </h3>
       <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">security</span>
     </div>
+    <p class="text-sm opacity-70">
+
+ Création d’une commode multifonction pour un espace sécurisé. J’ai intégré des solutions de rangement intelligentes et un design soigné, en travaillant sur la praticité et l’esthétique</p><br>
     <div class="flex gap-2 h-[300px] md:h-[700px] overflow-x-auto no-scrollbar snap-x px-2">
       <div class="min-w-[70%] snap-start bg-primary/5 rounded-lg border border-primary/10 overflow-hidden relative">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/p4projet31.jpg');"></div>
@@ -600,10 +632,11 @@ Des solutions de rangement pratiques et gain de place
   <article class="group">
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
-        <span class="text-primary font-mono text-2xl">04.</span> Meubles de rangement
+        <span class="text-primary font-mono text-2xl">04.</span> : Meubles de rangement (Shelves)
       </h3>
       <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">shelves</span>
     </div>
+    <p  class="text-sm opacity-70">  Conception de meubles de rangement modulables en HDF pour optimiser un petit espace. Ce projet illustre ma maîtrise de l’organisation et du design fonctionnel</p><br>
     <div class="grid grid-cols-2 gap-2 h-[500px] md:h-[700px]">
       <div class="bg-primary/5 rounded-lg border border-primary/10 overflow-hidden relative">
         <div class="absolute inset-0 bg-cover bg-center h-[700px]" style="background-image: url('img/p4projet41.jpg');"></div>
@@ -642,10 +675,11 @@ Des solutions de rangement pratiques et gain de place
   <article class="group">
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
-        <span class="text-primary font-mono text-2xl">05.</span> Cuisine
+        <span class="text-primary font-mono text-2xl">05.</span> Cuisine(countertops)
       </h3>
-      <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">countertops</span>
     </div>
+    <p  class="text-sm opacity-70">
+    Réalisation d’une petite cuisine intégrée avec plans de travail et rangements en HDF. J’ai travaillé sur l’ergonomie et l’efficacité de l’espace, tout en gardant un style moderne et épuré</p><br>
     <div class="grid grid-cols-[2fr_1fr] gap-2 h-[300px] md:h-[700px]">
       <div class="bg-primary/5 rounded-lg border border-primary/10 overflow-hidden relative">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/p4projet51.jpg');"></div>
@@ -665,10 +699,10 @@ Des solutions de rangement pratiques et gain de place
   <article class="group">
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
-        <span class="text-primary font-mono text-2xl">06.</span> Meuble rangement
+        <span class="text-primary font-mono text-2xl">06.</span> Meuble rangement(checkroom)
       </h3>
-      <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">checkroom</span>
     </div>
+    <p class="text-sm opacity-70">Conception d’un meuble de rangement pratique pour diverses fonctions. Ce projet montre ma capacité à allier fonctionnalité, modularité et esthétique</p><br>
     <div class="w-full h-[300px] md:h-[700px] bg-primary/5 rounded-lg border border-primary/10 overflow-hidden bg-cover bg-center" 
          style="background-image: url('./img/p4projet6.jpg');"></div>
   </article>
@@ -677,10 +711,12 @@ Des solutions de rangement pratiques et gain de place
   <article class="group pb-10">
     <div class="flex items-center justify-between mb-3">
       <h3 class="text-lg font-bold flex items-center gap-2">
-        <span class="text-primary font-mono text-2xl">07.</span> Bureau
+        <span class="text-primary font-mono text-2xl">07.</span> Bureau(desktop_windows)
       </h3>
-      <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">desktop_windows</span>
+      <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors"></span>
     </div>
+        <p class="text-sm opacity-70">Création d’un bureau en HDF adapté à un espace de travail personnel. J’ai intégré ergonomie, rangement intelligent et design moderne, pour un espace fonctionnel</p><br>
+
     <div class="grid grid-cols-1 gap-4">
       <div class="grid grid-cols-2 gap-2 h-[300px] md:h-[700px]">
         <div class="bg-primary/5 rounded-lg border border-primary/10 overflow-hidden relative">
@@ -790,17 +826,14 @@ Des solutions de rangement pratiques et gain de place
 <div class="flex justify-between items-start mb-2">
 <div>
 <h2 class="text-xl font-bold text-primary dark:text-primary"> Projet personnel 1</h2>
-<p class="text-sm text-stone-500 dark:text-stone-400 mt-1"> Aménagement de salon</p>
+<p class="text-sm text-stone-500 dark:text-stone-400 mt-1 font-semibold"> Aménagement de salon(Inspiration)</p>
 </div>
 <span class="material-symbols-outlined text-primary">favorite</span>
 </div>
 <p class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed mb-4">
                       
-Proposition d’un salon moderne et fonctionnel intégrant un meuble TV en HDF et des étagères murales pour optimiser l’espace.
-Image d’inspiration </p>
-<!-- <button class="w-full py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold text-sm transition-colors flex items-center justify-center gap-2"> -->
-                      
-</button>
+Proposition d’aménagement pour un salon moderne, basée sur des images d’inspiration. J’ai réfléchi à la circulation, au confort et à l’harmonie des couleurs, et imaginé comment intégrer un meuble TV en HDF pour allier fonctionnalité et esthétique</p>
+
 </div>
 </div>
 <br>
@@ -822,7 +855,7 @@ Image d’inspiration </p>
 <div class="flex justify-between items-start mb-2">
 <div>
 <h2 class="text-xl font-bold text-primary dark:text-primary"> Projet personnel 2 </h2>
-<p class="text-sm text-stone-500 dark:text-stone-400 mt-1">Aménagement de chambre</p>
+<p class="text-sm text-stone-500 dark:text-stone-400 mt-1 font-semibold">Aménagement de chambre (Inspiration)</p>
 </div>
 <span class="material-symbols-outlined text-primary">favorite</span>
 
@@ -830,7 +863,7 @@ Image d’inspiration </p>
 <p class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed mb-4">
                        
 Organisation d’une chambre avec des solutions de rangement pratiques et une disposition harmonieuse pour créer un espace confortable.
-Image d’inspiration
+
 
 
 </div>
@@ -845,15 +878,14 @@ Image d’inspiration
 <div class="flex justify-between items-start mb-2">
 <div>
 <h2 class="text-xl font-bold text-primary dark:text-primary">Projet personnel 3</h2>
-<p class="text-sm text-stone-500 dark:text-stone-400 mt-1">  Coin bureau</p>
+<p class="text-sm text-stone-500 dark:text-stone-400 mt-1 font-semibold ">  Coin bureau (Inspiration)</p>
 </div>
 <span class="material-symbols-outlined text-primary">favorite</span>
 
 </div>
 <p class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed mb-4">
                        
-Création d’un espace de travail simple et fonctionnel, adapté aux petits espaces, avec des rangements pour une meilleure organisation.
-Image d’inspiration
+Idée de bureau modulable pour un espace de travail, inspirée de modèles existants. L’objectif est de montrer ma capacité à penser l’ergonomie, le rangement et le design contemporain, même à partir d’inspirations.
                     </p>
 
 </div>
@@ -1031,7 +1063,7 @@ Ces objectifs reflètent mon intérêt pour l’aménagement intérieur, la cré
 </div>
 </section>
 <!-- Quick Contact Cards -->
-<section class="px-6 space-y-3 mb-8">
+<section class="px-6 space-y-3 mb-8  "id="contact">
 <!-- Phone -->
 <a class="flex items-center gap-4 p-4 bg-white dark:bg-neutral-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-all" href="tel:+2290191649610">
 <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary">
